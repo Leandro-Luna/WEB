@@ -1,0 +1,32 @@
+<%- include("partials/head") %>
+
+<body>
+    <div>
+        <h1>Pokémon App</h1>
+  
+        <label htmlFor="type">Select a type:</label>
+        <select id="type" value='' onchange="">
+          <option value="">All</option>
+          <% pokemon.types.forEach(function(type) { %>
+            <option key=<%= type %>type value=<%= type  %>><%= type  %></option>
+        <% }) %>
+        </select>
+  
+        <h2>Pokémon List</h2>
+        <ul>
+            <% pokemon.pokemon.forEach(function(poke) { %>
+                <li key=<%= poke.name %>><%= poke.name %></li>
+            <% }) %>
+        </ul>
+  
+        <div>
+          <button onClick='' disabled=''>
+            Previous
+          </button>
+          <button onClick='' disabled=''>
+            Next
+          </button>
+        </div>
+      </div>
+
+</body>
